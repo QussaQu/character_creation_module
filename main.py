@@ -19,30 +19,33 @@ def attack(char_name, char_class):
 def defence(char_name, char_class):
     if char_class == 'warrior':
         return (
-            f'{char_name} блокировал {10 + randint(5, 10)} урона'
+            f'{char_name} блокировал {10 + randint(5, 10)} ед. урона'
             )
     if char_class == 'mage':
         return (
-            f'{char_name} блокировал {10 + randint(-2, 2)} урона'
+            f'{char_name} блокировал {10 + randint(-2, 2)} ед. урона'
             )
     if char_class == 'healer':
         return (
-            f'{char_name} блокировал {10 + randint(2, 5)} урона'
+            f'{char_name} блокировал {10 + randint(2, 5)} ед. урона'
             )
 
 
 def special(char_name, char_class):
     if char_class == 'warrior':
         return (
-            f'{char_name} применил специальное умение «Выносливость {105}»'
+            f'{char_name} применил специальное умение '
+            f'«Берсерк» выносливость: {105}'
             )
     if char_class == 'mage':
         return (
-            f'{char_name} применил специальное умение «Атака {45}»'
+            f'{char_name} применил специальное умение '
+            f'«Магический всплеск» атака: {45}'
             )
     if char_class == 'healer':
         return (
-            f'{char_name} применил специальное умение «Защита {40}»'
+            f'{char_name} применил специальное умение'
+            f'«Зелье защиты» защита: {40}'
             )
 
 
@@ -79,7 +82,7 @@ def choice_char_class():
     while approve_choice != 'y':
         char_class = input(
                     'Введи название персонажа, за которого хочешь играть: '
-                    'Воитель — warrior, Маг — mage, Лекарь — healer:')
+                    'Воитель — warrior, Маг — mage, Лекарь — healer: ')
         if char_class == 'warrior':
             print(
                 'Воитель — дерзкий воин ближнего боя. '
